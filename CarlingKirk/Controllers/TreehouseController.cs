@@ -12,14 +12,7 @@ namespace CarlingKirk.Controllers
         // GET: Treehouse
         public ActionResult Index()
         {
-            try
-            {
-                ViewBag.FilePath = Server.MapPath("~");
-            }
-            catch (Exception ex)
-            {
-                ViewBag.Error = ex.Message + " - " + ex.InnerException;
-            }
+            ViewBag.FilePath = System.IO.Path.Combine(String.Format("{0}{1}video.{2}", System.Web.HttpContext.Current.Server.MapPath("~"), Constants.FilePath, "mp4"));
             return View();
         }
     }

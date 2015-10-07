@@ -15,11 +15,8 @@ namespace CarlingKirk.Controllers.api
         // GET: api/VideoStream
         [HttpGet]
         [Route("api/Video/{fileExtension?}")]
-        public HttpResponseMessage Get(string fileExtension)
+        public HttpResponseMessage Get(string fileExtension = "mp4")
         {
-            if (String.IsNullOrEmpty(fileExtension))
-                fileExtension = "mp4";
-
             var video = new Video(fileExtension);
             var response = Request.CreateResponse();
             response.Content = new PushStreamContent(async (Stream outputStream, HttpContent content, TransportContext context) => { await video.StreamVideo(outputStream, content, context); }, new MediaTypeHeaderValue(String.Format("video/{0}", fileExtension)));

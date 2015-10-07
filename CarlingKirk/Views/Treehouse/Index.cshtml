@@ -3,14 +3,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Hello Treehouse!</h2>
 
 <video width="480" height="320" controls="controls" autoplay="autoplay">
     <source src='@Url.Content("~/api/Video/mp4")' type="video/mp4">
     <source src='@Url.Content("~/api/Video/webm")' type="video/webm">
     <source src='@Url.Content("~/api/Video/ogv")' type="video/ogv">
 </video>
-<p><span>@ViewBag.FilePath</span></p>
-<p><span>@ViewBag.Error</span></p>
-<p><a href="@Url.Content("~/Content/videos/video.mp4")"><span>Download the video</span></a></p>
-<p><a href="www.github.com"><span>The GitHub Repo</span></a></p>
+
+<p><a target="_blank" href="@Url.Content("~/Content/videos/video.mp4")"><span>Download the video</span></a></p>
+<p><a target="_blank" href="https://github.com/carlingkirk/CarlingKirk.com"><span>The GitHub Repo</span></a></p>

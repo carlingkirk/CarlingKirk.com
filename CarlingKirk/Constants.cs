@@ -8,6 +8,6 @@ namespace CarlingKirk
 {
     class Constants
     {
-        public const string FilePath = "E:\\HostingSpaces\\carlingk\\carlingkirk.com\\wwwroot\\Content\\Videos";
+        public const string FilePath = "Content\\Videos\\";
     }
 }

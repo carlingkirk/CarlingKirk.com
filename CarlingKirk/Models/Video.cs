@@ -22,7 +22,7 @@ namespace CarlingKirk.Models
             try
             {
                 var buffer = new byte[65536];
-                var filename = Path.Combine(Constants.FilePath, String.Format("video.{0}", _fileExtension));
+                var filename = Path.Combine(String.Format("{0}{1}video.{2}", System.Web.HttpContext.Current.Server.MapPath("~"), Constants.FilePath, _fileExtension));
                 using (var file = File.Open(filename, FileMode.Open, FileAccess.Read))
                 {
                     var videoLength = (int)file.Length;
