@@ -3,21 +3,21 @@
     ViewBag.Title = "Index";
 }
 <div class="row">
-    <div class="col-md-8" style="padding-bottom: 10px;">
+    <div class="col-md-10" style="padding-bottom: 10px;">
         <h2>Hello Treehouse!</h2>
         <p>
             I created this streaming video page and added my source to the GitHub repository below as an example of my code.
             Please view the video here or download a copy below.  You can also download a copy of my curriculum example in a link below.
         </p>
     </div><br />
-    <div class="col-md-5">
-        <video width="480" height="320" controls="controls">
+    <div class="col-md-9">
+        <video width="720" height="576" controls="controls">
             <source src='@Url.Content("~/api/Video/mp4")' type="video/mp4">
             <source src='@Url.Content("~/api/Video/webm")' type="video/webm">
             <source src='@Url.Content("~/api/Video/ogv")' type="video/ogv">
         </video>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-3" style="padding-left: 20px;">
         <p style="font-weight:bold;">ASP.NET MVC Sample Curriculum</p>
         <ol>
             <li>
@@ -61,7 +61,7 @@
                 </ol>
         </ol>
     </div>
-    <div class="col-md-8"><h4>Links</h4>
+    <div class="col-md-3"><h4>Links</h4>
         <p><a target="_blank" href="@Url.Content("~/Content/documents/MVCCurriculum.docx")"><span>MVC Curriculum Example</span></a></p>
         <p><a target="_blank" href="@Url.Content("~/Content/videos/video.mp4")"><span>Download the video</span></a></p>
         <p><a target="_blank" href="https://github.com/carlingkirk/CarlingKirk.com"><span>The GitHub Repo</span></a></p>
