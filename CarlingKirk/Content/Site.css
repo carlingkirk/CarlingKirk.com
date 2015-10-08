@@ -30,3 +30,13 @@ textarea {
     width: 100%;
     background-color: turquoise;
 }
+
+ol > li > ol > li
+{
+    list-style-type: lower-alpha;
+}
+
+ ol > li > ol > li > ol > li
+ {
+     list-style-type: lower-roman;
+ }
