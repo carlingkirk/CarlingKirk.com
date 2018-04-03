@@ -8,7 +8,7 @@ namespace CarlingKirk.Controllers
 {
     public class TreehouseController : Controller
     {
-        [Authorize(Roles ="Treehouse")]
+        [Authorize(Roles ="Treehouse,Admin")]
         // GET: Treehouse
         public ActionResult Index()
         {

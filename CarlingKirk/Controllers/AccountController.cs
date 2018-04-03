@@ -136,7 +136,7 @@ namespace CarlingKirk.Controllers
 
         //
         // GET: /Account/Register
-        [Authorize(Roles = "Administrator")]
+        [AllowAnonymous]
         public ActionResult Register()
         {
             return View();
@@ -145,7 +145,7 @@ namespace CarlingKirk.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        [Authorize(Roles = "Administrator")]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
